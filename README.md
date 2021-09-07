@@ -1,40 +1,54 @@
-## ETHPool
+## LotteryPool
 
-#### Sumary
-ETHPool provides a service where people can deposit ETH and they will receive weekly rewards. Users must be able to take out their deposits along with their portion of rewards at any time. New rewards are deposited manually into the pool by the ETHPool team each week using a contract function.
+#### Resumen
 
-#### Contract
+LotteryPool es una lotería en la blockchain. Donde podes participar comprando boletos, el azar dirá si eres el ganador y obtienes las recompensas que es el pozo acumulado.
 
-* **Stake**
-    * The team cannot stake.
-    * The amount to stake must be greater than 0.
+#### Casos de uso
 
-* **Compound**
-    *If you have rewards, it is added to the current Staked balance.
+- **Usuarios**
 
-* **Deposit**
-    * Only the team can deposit.
-    * The amount to be deposited must be greater than 0.
-    * If there is not stakers can not deposit.
-    * The rewards are distributed at this time and the current pool is closed.
-    * There are no deposit limits.
+  - Comprar boletos
+  - Retirar recompensas
 
-* **Harvest**
-    * If the staker has balance or rewards or both, he can withdraw.
-    * When withdrawing, the balance is empty and rewards are assigned a check mark that they have already withdrawn.
+- **Owner**
+  - Disparar el evento que busca al usuario ganador
+  - Cambiar el precio del boleto
+  - Pausar/Des pausar el contrato
 
-* **Clarifications:**
+#### Aclaraciones del contrato
 
-    Rewards are distributed to bettors once the team deposits. 
-    Once the deposit is made, the balances that are in the previous pool are automatically transferred to the next current pool.
-    When distributing the rewards it is not entirely accurate.
-    A staker can bet as many times as he wants.
+    * Por lotería hay un solo ganador !Se lleva todo lo que está en el pozo acumulado!
+    * No hay reembolsos en la compra de boletos
+    * Al comprar boletos debe pagar justo ya que una vez que pase las validaciones se agrega al pozo acumulado.
+      Ejemplo: El boleto sale 1 ETHER. Quiero comprar 3 boletos. Por lo tanto el monto a enviar es 3 ETHER.
+      Si envió menos de esa cantidad no te va a dejar comprar.
+      Si envió más de esa cantidad solo va a comprar 3 boletos y lo restante lo agrega al pozo acumulado.
+    * Al terminar una lotería se reinician todos los datos menos el historial de loterías.
+    * Si el contrato esta pausado no se va a poder retirar y tampoco comprar boletos
+    * El owner no obtiene ningún tipo de ganancia
 
+#### Aclaraciones a nivel técnico
+    * Lo que es el kernel del contrato(obtener un ganador de la loteria) no logre testearlo ya que no pude hacer un mock de chainlink.
+      Lo que si hice es probarlo directamente en la red.
 
-#### Contract deployment
- * **ETHPool**
-    * Newtwork: Ropsten 
-    * Contract address : 0x12B930c1F8e023Bc9D2DB1757Cc55ED7E73FB598 
+#### Template
+
+Template utilizado como base https://github.com/abarmat/solidity-starter
+
+#### Dapp
+
+Repositorio: https://github.com/dpinones/Lottery-Frontend
+
+La Dapp esta alojada en heroku. Link: https://dapp-lottery-eth.herokuapp.com/
+
+Más allá de no ser experto en frontend y ether.js trate de crear una Dapp simple donde se puede interactuar con el contrato. Claramente es secundario lo que en realidad tiene importancia es el desarrollo del contrato.
+
+#### Contrato deploy
+
+- **ETHPool**
+  - Newtwork: Kovan
+  - Contract address : 0x824eD0C80CF2913F15f41FEC3148E162E65C52e3
 
 #### Testing
 
