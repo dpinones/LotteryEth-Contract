@@ -53,7 +53,7 @@ contract LotteryEth is Ownable, Pausable, VRFConsumerBase {
     // USERS
     function buyTicket(uint256 amount) external payable onlyUser whenNotPaused {
         require(amount != 0, "LotteryEth: can not get zero ticket");
-        require(msg.value >= amount * ticketValue, "LotteryEth: amount can not be 0");
+        require(msg.value >= amount * ticketValue, "LotteryEth: insufficient amount");
         totalPool += msg.value;
         for (uint256 i; i < amount; i++) {
             ticketsForUser[msg.sender]++;
