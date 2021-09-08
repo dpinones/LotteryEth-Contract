@@ -41,6 +41,7 @@ Template utilizado como base https://github.com/abarmat/solidity-starter
 Repositorio: https://github.com/dpinones/Lottery-Frontend
 
 La Dapp esta alojada en heroku. Link: https://dapp-lottery-eth.herokuapp.com/
+
 Video de la demo(Velocidad x2): https://www.loom.com/share/6f273d8d3e294dc79d3afb143e579560
 
 Más allá de no ser experto en frontend y ether.js trate de crear una Dapp simple donde se puede interactuar con el contrato. Claramente es secundario lo que en realidad tiene importancia es el desarrollo del contrato.
