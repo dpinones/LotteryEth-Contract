@@ -14,7 +14,7 @@ LotteryEth es una lotería en la blockchain. Donde podes participar comprando bo
 - **Owner**
   - Disparar el evento que busca al usuario ganador
   - Cambiar el precio del boleto
-  - Pausar/Des pausar el contrato
+  - Pausar/Despausar el contrato
 
 #### Aclaraciones del contrato
 
@@ -29,8 +29,7 @@ LotteryEth es una lotería en la blockchain. Donde podes participar comprando bo
   * El owner no obtiene ningún tipo de ganancia
 
 #### Aclaraciones a nivel técnico
-  * Lo que es el kernel del contrato(obtener un ganador de la loteria) no logre testearlo ya que no pude hacer un mock de chainlink.
-    Lo que si hice es probarlo directamente en la red.
+  * La funcionalidad core de obtener un ganador de la lotería aún no está testeada dentro del proyecto. Debería crearse un mock de Chainlink para ello.
 
 #### Template
 
@@ -42,9 +41,11 @@ Repositorio: https://github.com/dpinones/Lottery-Frontend
 
 La Dapp esta alojada en heroku. Link: https://dapp-lottery-eth.herokuapp.com/
 
-Video de la demo(Velocidad x2): https://www.loom.com/share/6f273d8d3e294dc79d3afb143e579560
+Video de la demo(Velocidad recomendada x2): https://www.loom.com/share/6f273d8d3e294dc79d3afb143e579560
 
-Más allá de no ser experto en frontend y ether.js trate de crear una Dapp simple donde se puede interactuar con el contrato. Claramente es secundario lo que en realidad tiene importancia es el desarrollo del contrato.
+Vista previa
+
+![Preview](preview.png)
 
 #### Contrato deploy
 
