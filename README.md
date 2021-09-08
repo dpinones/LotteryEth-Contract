@@ -1,8 +1,8 @@
-## LotteryPool
+## LotteryEth
 
 #### Resumen
 
-LotteryPool es una lotería en la blockchain. Donde podes participar comprando boletos, el azar dirá si eres el ganador y obtienes las recompensas que es el pozo acumulado.
+LotteryEth es una lotería en la blockchain. Donde podes participar comprando boletos, el azar dirá si eres el ganador y obtienes las recompensas que es el pozo acumulado.
 
 #### Casos de uso
 
@@ -47,7 +47,7 @@ Más allá de no ser experto en frontend y ether.js trate de crear una Dapp simp
 
 #### Contrato deploy
 
-- **ETHPool**
+- **LotteryEth**
   - Newtwork: Kovan
   - Contract address : 0x824eD0C80CF2913F15f41FEC3148E162E65C52e3
 

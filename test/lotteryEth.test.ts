@@ -7,7 +7,7 @@ import { LotteryEth__factory, LotteryEth } from '../build/types'
 
 const { getContractFactory, getSigners } = ethers
 
-describe('PoolEth', () => {
+describe('LotteryEth', () => {
   let lotteryEth: LotteryEth
   let deployer, userA, userB, userToTeam
   let ether1, ether2, ether3
